@@ -5,4 +5,4 @@
 - Collaborated with UI/UX Designer, Darren Yang
 - Creating functional iOS app using SwiftUI & Xcode
 
-![Plans-Tab](https://github.com/user-attachments/assets/2f7d66e5-6144-4d48-8ad4-3e35779e53e6)
+[<img src="https://github.com/user-attachments/assets/2f7d66e5-6144-4d48-8ad4-3e35779e53e6" width="250"/>](https://github.com/user-attachments/assets/2f7d66e5-6144-4d48-8ad4-3e35779e53e6)
