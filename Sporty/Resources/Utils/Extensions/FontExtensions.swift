@@ -41,14 +41,14 @@ extension Font.TextStyle {
         switch self {
         case .largeTitle: return 24 // sporty logo, H1
         case .title: return 20      // title outside card, H2
-        case .title2: return 22
+        case .title2: return 16     // title in cards
         case .title3: return 20
-        case .headline: return 14 // filters
-        case .body: return 17
+        case .headline: return 14 // filters + button text
+        case .body: return 14       // card location, regular text
         case .callout: return 16    // view all
         case .subheadline: return 15
         case .footnote: return 13
-        case .caption: return 12
+        case .caption: return 12    // card sport + level + time + friends
         case .caption2: return 11
         @unknown default:
             return 8
