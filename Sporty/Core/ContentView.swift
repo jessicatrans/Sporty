@@ -13,7 +13,8 @@ struct ContentView: View {
     @Query private var items: [Item]
     
     var body: some View {
-        TabPageView()
+//        TabPageView()
+        TabScreenView()
     }
 
     private func addItem() {
@@ -36,45 +37,45 @@ struct ContentView: View {
     ContentView()
         .modelContainer(for: Item.self, inMemory: true)
 }
-
-struct TabPageView: View {
-    @State private var selectedTab: Int = 0
-    
-    var body: some View {
-        TabView(selection: $selectedTab) {
-            PlansScreen()
-                .tabItem {
-                    Image(systemName: "calendar")
-                    Text("Plans")
-                }
-                .tag(0)
-            PlayersScreen()
-                .tabItem {
-                    Image(systemName: "person.2")
-                    Text("Players")
-                }
-                .tag(1)
-            Text("Create")
-                .tabItem {
-                    Image(systemName: "plus.circle")
-                    Text("Create")
-                }
-                .tag(2)
-            Text("Chats")
-                .tabItem {
-                    Image(systemName: "message")
-                    Text("Chats")
-                }
-                .tag(3)
-                .badge(6)
-            Text("Profile")
-                .tabItem {
-                    Image(systemName: "person.crop.circle")
-                    Text("Profile")
-                }
-                .tag(4)
-            
-        }
-        .tint(Color(.black))
-    }
-}
+//
+//struct TabPageView: View {
+//    @State private var selectedTab: Int = 0
+//    
+//    var body: some View {
+//        TabView(selection: $selectedTab) {
+//            PlansScreen()
+//                .tabItem {
+//                    Image(systemName: "calendar")
+//                    Text("Plans")
+//                }
+//                .tag(0)
+//            PlayersScreen()
+//                .tabItem {
+//                    Image(systemName: "person.2")
+//                    Text("Players")
+//                }
+//                .tag(1)
+//            Text("Create")
+//                .tabItem {
+//                    Image(systemName: "plus.circle")
+//                    Text("Create")
+//                }
+//                .tag(2)
+//            Text("Chats")
+//                .tabItem {
+//                    Image(systemName: "message")
+//                    Text("Chats")
+//                }
+//                .tag(3)
+//                .badge(6)
+//            Text("Profile")
+//                .tabItem {
+//                    Image(systemName: "person.crop.circle")
+//                    Text("Profile")
+//                }
+//                .tag(4)
+//            
+//        }
+//        .tint(Color(.black))
+//    }
+//}

@@ -35,7 +35,7 @@ struct TabScreenView: View {
                 }
                 .tag(Tab.players)
             
-            Text("Create")
+            CreateScreen()
                 .tabItem {
                     Image(systemName: "plus.circle")
                     Text("Create")
