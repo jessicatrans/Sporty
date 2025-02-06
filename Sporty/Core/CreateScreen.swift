@@ -22,16 +22,38 @@ struct CreateScreen: View {
                 
                 Spacer()
             }
-            HStack{
-                // image (optional)
-                Image("plan-picture")
-                    .resizable()
-                    .aspectRatio(contentMode: .fit)
-                    .overlay(ImageOverlay(), alignment: .center)    // overlay text "upload(optional)"
-            }
             
+            ScrollView {
+                HStack{
+                    // image (optional)
+                    Image("plan-picture")
+                        .resizable()
+                        .aspectRatio(contentMode: .fit)
+                        .overlay(ImageOverlay(), alignment: .center)    // overlay text "upload(optional)"
+                }
                 
-            Spacer()
+                    
+                Spacer()
+                
+                // TODO: Input sections
+                VStack {
+                    InputView()
+                    InputView()
+                    InputView()
+                    InputView()
+                }
+                .padding(.vertical, 5)
+                
+                Divider()
+                    .frame(width: 365, height: 20)
+                VStack {
+                    OptionalTitle(title: "Optional")
+                    InputView()
+                    InputView()
+                    InputView()
+                    InputView()
+                }
+            }
             
             // TODO: "Create plan" button
             CreatePlanButton()
@@ -71,5 +93,51 @@ struct CreatePlanButton : View {
         .background(Color(.systemGray3))
         .cornerRadius(10)
         
+    }
+}
+
+struct OptionalTitle: View {
+    let title: String
+    var body: some View {
+        HStack {
+            Text(title)
+                .font(.setCustom(fontStyle: .title, fontWeight: .semibold))
+            Spacer()
+        }
+        .padding(.horizontal, 20)
+        .padding(.top, 10)
+    }
+}
+
+
+struct InputView : View {
+    var body: some View {
+        Button {
+            
+        } label: {
+            HStack {
+                Image("sporty")
+
+                VStack {
+                    Text("Sport")
+                        .font(.setCustom(fontStyle: .body))
+                    Text("Tennis")
+                        .font(.setCustom(fontStyle: .caption))
+                }
+                .foregroundStyle(Color(.black))
+                Spacer()
+                
+                // TODO: update arrow
+                Image(systemName: "chevron.right")
+                    .foregroundStyle(Color(.black))
+            }
+            .padding(20)
+            
+        }
+        .frame(width: 361, height: 56)
+        .overlay(
+            RoundedRectangle(cornerRadius: 10)
+                .stroke(Color(.systemGray4), lineWidth: 1)
+        )
     }
 }
